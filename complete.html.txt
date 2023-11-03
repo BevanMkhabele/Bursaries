@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Complete</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            background: linear-gradient(45deg, #FF5733, #007BFF, #00FF00);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        p {
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        a.button {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007BFF;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a.button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a.button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Complete</h1>
+    <p>You will be sent an SMS to confirm your application. Thank you for registering with us!</p>
+</body>
+</html>
