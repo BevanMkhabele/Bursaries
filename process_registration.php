@@ -2,7 +2,7 @@
 // Database connection details
 $host = "localhost"; // Use "localhost" for a database on the same server
 $dbname = "user_input"; // Updated to match your database name
-$username = "route"; // Updated to match your database username (route)
+$username = "root"; // Updated to match your database username (route)
 $password = ""; // Database password is blank
 
 try {
