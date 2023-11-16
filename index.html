@@ -55,13 +55,13 @@
       color: white;
       border: none;
       padding: 23px;
-      font-size:20px;
+      font-size: 20px;
       border-radius: 30px;
       opacity: 0.7;
       transition: opacity 0.2s;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      padding-top:10px;
-      padding-bottom:10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
 
     .button1:active {
@@ -97,7 +97,14 @@
     <p class="description">Kids with bursaries is a program designed to help with unemployment around South Africa by reducing the hassle between
       bursary applicants and companies that offer bursaries </p>
   </div>
-  <button class="button1">Register</button>
+  <button class="button1" onclick="openForm()">Register</button>
+
+  <script>
+    function openForm() {
+      window.location.href = 'Form.html';
+    }
+  </script>
 </body>
 
 </html>
+
