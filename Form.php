@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: lightblue;
             margin: 0;
             padding: 0;
         }
@@ -14,11 +14,13 @@
         h1 {
             text-align: center;
             color: #333;
+            font-family: arial;
         }
         
         p {
             text-align: center;
             color: #777;
+            font-family: arial;
         }
         
         form {
