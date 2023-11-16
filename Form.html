@@ -63,7 +63,7 @@
     <h1>Registration Form</h1>
     <p>Fill in the registration form below:</p>
 
-    <form action="complete.html" method="POST">
+    <form id="registrationForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -76,13 +76,14 @@
         <label for="phoneNumber">Phone Number:</label>
         <input type="tel" id="phoneNumber" name="phoneNumber" required>
 
-        <input type="submit" value="Submit" class="button">
+        <button type="button" class="button" onclick="submitForm()">Submit</button>
     </form>
 
     <script>
-        document.getElementById("getStartedLink").addEventListener("click", function () {
-            alert("Welcome to Bursaries South Africa! Let's get started.");
-        });
+        function submitForm() {
+            // Add form validation logic if needed
+            window.location.href = 'complete.html';
+        }
     </script>
 </body>
 
