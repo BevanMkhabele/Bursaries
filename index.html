@@ -1,30 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background-color: lightblue;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
     }
 
     .Kids {
       font-family: arial;
-      font-size: 50px;
+      font-size: 30px;
       text-align: center;
       font-weight: bold;
       background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
-    .p,content-div{
-      margin-top:0;
-      margin-bottom:0;
-      margin-left:0;
-      margin-right:0;
-      padding-top:0;
-      padding-bottom:0;
-      padding-left:0;
-      padding-right:0;
     }
 
     .kid {}
@@ -47,9 +42,9 @@
 
     .description {
       text-align: center;
-      font-size: 20px;
+      font-size: 14px;
       font-family: arial;
-      margin-bottom: 60px;
+      margin: 20px;
     }
 
     /* Center the button */
@@ -59,12 +54,9 @@
       background-color: blue;
       color: white;
       border: none;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      padding-left: 8px;
-      padding-right: 8px;
+      padding: 8px;
       border-radius: 7px;
-      opacity: 0.5;
+      opacity: 0.8;
       transition: opacity 0.2s;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
@@ -75,14 +67,24 @@
 
     /* Style for the div */
     .content-div {
-      background-color: white; /* Change this to the desired color */
+      background-color: white;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       margin: 20px;
     }
-  </style>
 
+    /* Media query for smaller screens (adjust as needed) */
+    @media (max-width: 600px) {
+      .Kids {
+        font-size: 24px;
+      }
+
+      .description {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -93,7 +95,6 @@
       bursary applicants and companies that offer bursaries </p>
   </div>
   <button class="button1">Register</button>
-
 </body>
 
 </html>
