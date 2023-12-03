@@ -76,6 +76,20 @@
         <label for="phoneNumber">Phone Number:</label>
         <input type="tel" id="phoneNumber" name="phoneNumber" required>
 
+        <!-- New section for uploading parents' details and financial information -->
+        <label for="parentsDetails">Upload Parents Details:</label>
+        <input type="file" id="parentsDetails" name="parentsDetails" accept=".pdf, .jpg, .png" required>
+
+        <label for="idPicture">Upload ID Picture:</label>
+        <input type="file" id="idPicture" name="idPicture" accept=".jpg, .png" required>
+
+        <label for="proofOfResidence">Upload Proof of Residence:</label>
+        <input type="file" id="proofOfResidence" name="proofOfResidence" accept=".pdf, .jpg, .png" required>
+
+        <label for="bankStatement">Upload 3 Months Bank Statement:</label>
+        <input type="file" id="bankStatement" name="bankStatement" accept=".pdf" required>
+        <!-- End of new section -->
+
         <button type="button" class="button" onclick="submitForm()">Submit</button>
     </form>
 
