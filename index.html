@@ -1,84 +1,221 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      p {
-        margin: 0;
-      }
+<html lang="en">
 
-      .div-row {
-        font-weight: bold;
-        font-family: Arial;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 5px;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        position: relative;
-        font-size:18px;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Header with NSFAS Logo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-      .arrow-container {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-      }
+    /* Sticky header styles */
+    .header {
+      background-color: white;
+      padding: 10px 20px;
+      color: black;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc; /* Add a bottom border */
+      margin-top: 20px; /* Increased top margin by 10px */
+      margin-bottom: 20px; /* Increased bottom margin by 10px */
+    }
 
-      .arrow {
-        color: blue;
-        font-size: 20px;
-        font-weight: 300;
-        margin-left: 5px; /* Add this line for a small space between > and text */
+    /* Profile icon container */
+    .profile-icon {
+      margin-right: 10px;
+    }
+
+    /* Open button styles */
+    .open-btn {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Right button styles */
+    .right-btn {
+      background-color: #d45a00; /* Updated to a darker shade of orange */
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    /* Hamburger icon styles */
+    .hamburger-icon {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin-bottom: 5px;
+    }
+
+    /* Left navigation bar styles */
+    .navbar {
+      width: 200px;
+      height: 100vh;
+      background-color: #f4f4f4;
+      position: fixed;
+      top: 0;
+      left: -200px;
+      overflow-y: auto;
+      padding-top: 70px;
+      transition: left 0.3s ease;
+    }
+
+    /* Close button styles */
+    .close-btn {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: right;
+      width: 100%;
+    }
+
+    /* Style for navbar links */
+    .navbar a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* Change link color on hover */
+    .navbar a:hover {
+      background-color: #ddd;
+    }
+
+    /* Parent container for flex layout */
+    .flex-container {
+      display: flex;
+    }
+
+    /* Page content styles */
+    .content {
+      padding: 20px;
+      margin-top: 30px;
+      margin-left: 20px;
+      height: 1500px;
+      width: 1fr; /* Set flex to 1 (1fr) */
+    }
+    .Nsfas {
+      color: #d45a00;
+    }
+
+    /* Hero container styles */
+    .hero-container {
+      width: 1fr; /* Set flex to 1 (1fr) */
+      overflow: hidden; /* Hide overflow to prevent scrollbar */
+      position: relative; /* Relative positioning for absolute positioning of the image */
+    }
+
+    /* Hero image styles */
+    .hero-image {
+      width: 100%;
+      animation: moveUpDown 2s ease infinite; /* Add animation */
+    }
+
+    /* Animation keyframes for moving up and down */
+    @keyframes moveUpDown {
+      0%, 100% {
+        transform: translateY(0);
       }
-    </style>
-  </head>
-  <body>
-    <div class="div-row">
-      <p>
-        Capitec: Payment +R10000.00 into SAVINGS
-      </p>
-      <p>
-        ACCOUNT; Ref B MKHABELE; Avail R12070.00; 05-...
-      </p>
-      <div class="arrow-container">
-        <div class="arrow">></div>
-      </div>
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* NSFAS logo styles */
+    .nsfas-logo {
+      width: auto; /* Set width to auto to maintain original shape */
+      height: 40px;
+    }
+
+    /* Icon styles */
+    .icon {
+      width: 20px; /* Adjust the size as needed */
+      height: 20px;
+      margin-right: 5px; /* Add margin for spacing */
+    }
+
+    /* Styles for the open state of the navbar */
+    .navbar.open {
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <!-- Profile icon container -->
+    <div class="profile-icon">
+      <!-- NSFAS logo -->
+      <img src="NSFASlogo.jpeg" alt="NSFAS Logo" class="nsfas-logo">
     </div>
 
-    <div class="div-row">
-      <p>
-        Capitec: Payment +R10000.00 into SAVINGS 
-      </p>
-      <p>
-        ACCOUNT; Ref B MKHABELE; Avail R12070.00; 05-...
-      </p>
-      <div class="arrow-container">
-        <div class="arrow">></div>
-      </div>
+    <!-- Open Button with Icon -->
+    <button class="open-btn" onclick="toggleNavbar()">
+      <img src="open-btn.jpeg" alt="Open Icon" class="icon">
+    </button>
+
+    <!-- Right Button -->
+    <button class="right-btn">myNSFAS</button>
+  </div>
+
+  <!-- Left Navigation Bar -->
+  <div class="navbar" id="navbar">
+    <button class="close-btn" onclick="toggleNavbar()">Close Navbar</button>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- Flex Container for Content and Hero Container -->
+  <div class="flex-container">
+    <!-- Page Content -->
+    <div class="content">
+      <h1><span class="Nsfas">NSFAS</span>2024 Applications <span class="Nsfas">are officially</span> opened!</h1>
+      <p>This is a simple example of a web page with a sticky header, a left navigation bar, and buttons to open/close the navbar. Scroll down to see the effect.</p>
+      <!-- Add more content as needed -->
     </div>
 
-    <div class="div-row">
-      <p>
-        Capitec: Payment +R10000.00 into SAVINGS 
-      </p>
-      <p>
-        ACCOUNT; Ref B MKHABELE; Avail R12070.00; 05-...
-      </p>
-      <div class="arrow-container">
-        <div class="arrow">></div>
-      </div>
+    <!-- Hero Container with Image -->
+    <div class="hero-container">
+      <img src="hero-3.png" alt="Hero Image" class="hero-image">
     </div>
+  </div>
 
-    <div class="div-row">
-      <p>
-        Capitec: Payment +R10000.00 into SAVINGS 
-      </p>
-      <p>
-        ACCOUNT; Ref B MKHABELE; Avail R12070.00; 05-...
-      </p>
-      <div class="arrow-container">
-        <div class="arrow">></div>
-      </div>
-    </div>
-  </body>
+  <script>
+    // Function to toggle the visibility of the navbar
+    function toggleNavbar() {
+      var navbar = document.getElementById('navbar');
+      navbar.classList.toggle('open');
+    }
+  </script>
+
+</body>
+
 </html>
