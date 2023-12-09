@@ -78,6 +78,7 @@
       overflow-y: auto;
       padding-top: 70px;
       transition: left 0.3s ease;
+      z-index: 101; /* Set a higher z-index than the new-div */
     }
 
     /* Close button styles */
@@ -169,7 +170,9 @@
       padding: 20px;
       background-color: #f4f4f4;
       text-align: center;
-      margin-top:40px;
+      margin-top: 50px;
+      position: relative;
+      z-index: 100; /* Set a lower z-index than the navbar */
     }
 
     .new-button {
@@ -182,7 +185,6 @@
       border-radius: 5px;
       font-size: 12px;
       position: relative;
-      
     }
 
     /* Loading circle animation */
@@ -270,7 +272,7 @@
 
     // Function to handle button click and show loading circle
     function handleButtonClick() {
-      var loadingCircle =  document.getElementById('loadingCircle');
+      var loadingCircle = document.getElementById('loadingCircle');
       loadingCircle.style.display = 'inline-block';
 
       // Simulate some asynchronous task (e.g., AJAX request)
