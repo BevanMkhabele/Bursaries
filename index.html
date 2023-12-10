@@ -236,6 +236,7 @@
   <!-- Left Navigation Bar -->
   <div class="navbar" id="navbar">
     <button class="close-btn" onclick="toggleNavbar()">Close Navbar</button>
+    <button class="header-div" onclick="openNavbar()">Open Navbar</button>
     <a href="javascript:void(0);" onclick="location.reload();">Home</a>
     <a href="#">About</a>
     <a href="#">Services</a>
@@ -259,7 +260,7 @@
 
   <!-- New div with a button -->
   <div class="new-div">
-    <button class="new-button" onclick="handleButtonClick()">Upload Documents
+    <button class="new-button" onclick="openForm()">Upload Documents
       <div class="loading-circle" id="loadingCircle"></div>
     </button>
   </div>
@@ -281,6 +282,17 @@
         // Hide loading circle after the task is completed
         loadingCircle.style.display = 'none';
       }, 2000); // Adjust the duration as needed
+    }
+
+    // Function to open "Form.html"
+    function openForm() {
+      window.location.href = 'Form.html';
+    }
+
+    // Function to open the navbar
+    function openNavbar() {
+      var navbar = document.getElementById('navbar');
+      navbar.classList.add('open');
     }
   </script>
 
