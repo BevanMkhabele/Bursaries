@@ -139,6 +139,35 @@
       min-height: 500px;
       padding: 20px;
     }
+
+    /* New div inside the main content */
+    .new-content {
+      background-color: #e0e0e0;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    /* Vertically aligned divs with buttons */
+    .vertical-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    /* Button styles */
+    .button-in-div {
+      background-color: #d45a00;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
   </style>
 </head>
 
@@ -176,6 +205,28 @@
   <div class="content">
     <h2>Main Content Goes Here</h2>
     <!-- Add your main content here -->
+
+    <!-- New div inside the main content -->
+    <div class="new-content">
+      <h3 >DOCUMENT UPLOAD SECTION </h3>
+      <p></p>
+    </div>
+
+    <!-- Vertically aligned divs with buttons -->
+    <div class="div-container">
+      <div class="vertical-div">
+        <p>A Valid SA ID</p>
+        <button class="button-in-div">Upload</button>
+      </div>
+      <div class="vertical-div">
+        <p>3 Latest payslips  </p>
+        <button class="button-in-div">Upload</button>
+      </div>
+      <div class="vertical-div">
+        <p>3 latest  bank statements</p>
+        <button class="button-in-div">Upload</button>
+      </div>
+    </div>
   </div>
 
   <script>
