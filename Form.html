@@ -29,14 +29,9 @@
     }
 
     /* Profile icon container */
-    .profile-icon {
-      margin-right: 10px;
-    }
-
-    /* Adjusted width for NSFAS logo */
-    .nsfas-logo {
-      width: 30px;
-      height: auto;
+    .profile-icon img,
+    .icon img {
+      width: 60px; /* Set the width to 60px */
     }
 
     /* Open button styles */
@@ -65,87 +60,7 @@
       font-size: 12px;
     }
 
-    /* Hamburger icon styles */
-    .hamburger-icon {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin-bottom: 5px;
-    }
-
-    .header-div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 20px;
-      padding: 0;
-    }
-
-    h1 {
-      margin: 0px;
-    }
-
-    /* Left navbar styles */
-    .navbar {
-      width: 200px;
-      height: 100vh;
-      background-color: white;
-      color: black;
-      position: fixed;
-      top: 0;
-      left: -200px;
-      overflow-y: auto;
-      padding-top: 120px;
-      transition: left 0.3s ease;
-      z-index: 999;
-      border-right: 1px solid #ccc;
-    }
-
-    .navbar a, .close-btn {
-      display: block;
-      padding: 10px;
-      text-decoration: none;
-      color: black;
-      cursor: pointer;
-    }
-
-    .navbar a:hover, .close-btn:hover {
-      background-color: #ccc;
-    }
-
-    /* Open button styles */
-    .open-btn {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      color: #4CAF50;
-      font-size: 18px;
-    }
-
-    /* Container for three divs */
-    .div-container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 20px;
-      background-color: #f4f4f4;
-      margin-top: 100px;
-    }
-
-    /* Individual div styles */
-    .upload-div {
-      background-color: #3498db;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      border-radius: 5px;
-    }
-
-    /* Content styles */
-    .content {
-      min-height: 500px;
-      padding: 20px;
-    }
+    /* ... (rest of your styles) */
   </style>
 </head>
 
@@ -161,6 +76,7 @@
 
     <!-- Open Button with Icon -->
     <button class="open-btn" onclick="toggleNavbar()">
+      <!-- Open Icon -->
       <img src="open-btn.jpeg" alt="Open Icon" class="icon">
     </button>
 
@@ -168,53 +84,7 @@
     <button class="right-btn">myNSFAS</button>
   </div>
 
-  <!-- Left Navbar -->
-  <div class="navbar" id="navbar">
-    <button class="close-btn" onclick="toggleNavbar()">Close Navbar</button>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-  </div>
-
-  <!-- Div Container -->
-  <div class="div-container">
-    <!-- Div 1: Upload Document -->
-    <div class="upload-div">
-      <h2>Upload Document</h2>
-    </div>
-
-    <!-- Div 2: Additional Div -->
-    <div class="additional-div">
-      <h2>Additional Div</h2>
-    </div>
-
-    <!-- Div 3: Another Div -->
-    <div class="another-div">
-      <h2>Another Div</h2>
-    </div>
-  </div>
-
-  <!-- Document Upload Page Content -->
-  <div class="content">
-    <h1>Main Content Goes Here</h1>
-  </div>
-
-  <script>
-    var navbar = document.getElementById('navbar');
-
-    // Function to toggle the visibility of the navbar
-    function toggleNavbar() {
-      var currentLeft = parseInt(window.getComputedStyle(navbar).left);
-      if (currentLeft >= 0) {
-        // If navbar is visible, hide it
-        navbar.style.left = "-200px";
-      } else {
-        // If navbar is hidden, show it
-        navbar.style.left = "0";
-      }
-    }
-  </script>
+  <!-- ... (rest of your HTML) -->
 
 </body>
 
