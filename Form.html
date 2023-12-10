@@ -13,26 +13,26 @@
 
     /* Header styles */
     .header {
-      background-color: white; /* Updated background color to white */
-      color: black; /* Updated text color to black */
+      background-color: white;
+      color: black;
       text-align: center;
       padding: 0px;
-      position: fixed; /* Make the header sticky */
-      width: 100%; /* Full width */
-      top: 0; /* Stick to the top */
-      z-index: 1000; /* Set a high z-index to ensure it stays above other elements */
-      display: flex; /* Use flexbox for layout */
-      justify-content: space-between; /* Space elements evenly */
-      align-items: center; /* Center items vertically */
-      border-bottom: 1px solid #ccc; /* Add a thin bottom border */
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
     }
 
     .header-div {
-      display: flex; /* Make the header-div a flex container */
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center items horizontally */
-      margin: 0 20px; /* Add margin to separate header-divs */
-      padding: 0; /* Set padding to 0 */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 20px;
+      padding: 0;
     }
 
     h1 {
@@ -43,27 +43,28 @@
     .navbar {
       width: 200px;
       height: 100vh;
-      background-color: white; /* Navbar background color */
-      color: black; /* Text color */
+      background-color: white;
+      color: black;
       position: fixed;
       top: 0;
-      left: -200px; /* Initially hidden */
+      left: -200px;
       overflow-y: auto;
       padding-top: 70px;
       transition: left 0.3s ease;
-      z-index: 1001; /* Ensure it's above the header */
-      border-right: 1px solid #ccc; /* Add a right border */
+      z-index: 1001;
+      border-right: 1px solid #ccc;
     }
 
-    .navbar a {
+    .navbar a, .close-btn {
       display: block;
       padding: 10px;
       text-decoration: none;
-      color: black; /* Text color */
+      color: black;
+      cursor: pointer;
     }
 
-    .navbar a:hover {
-      background-color: #ccc; /* Hover background color */
+    .navbar a:hover, .close-btn:hover {
+      background-color: #ccc;
     }
 
     /* Open button styles */
@@ -82,7 +83,7 @@
       align-items: center;
       padding: 20px;
       background-color: #f4f4f4;
-      margin-top: 100px; /* Add a top margin of 100px */
+      margin-top: 100px;
     }
 
     /* Individual div styles */
@@ -96,11 +97,9 @@
 
     /* Content styles */
     .content {
-      min-height: 500px; /* Set a minimum height for scrollability */
+      min-height: 500px;
       padding: 20px;
     }
-
-    /* Add more styles as needed */
   </style>
 </head>
 
@@ -152,7 +151,6 @@
   <!-- Document Upload Page Content -->
   <div class="content">
     <h1>Main Content Goes Here</h1>
-    <!-- Add more content to exceed the minimum height and make the page scrollable -->
   </div>
 
   <script>
