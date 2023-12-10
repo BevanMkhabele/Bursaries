@@ -23,9 +23,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #ccc; /* Add a bottom border */
-      margin-top: 0px; /* Increased top margin by 10px */
-      margin-bottom: 20px; /* Increased bottom margin by 10px */
+      border-bottom: 1px solid #ccc;
+      margin-top: 0px;
+      margin-bottom: 20px;
     }
 
     /* Profile icon container */
@@ -49,7 +49,7 @@
 
     /* Right button styles */
     .right-btn {
-      background-color: #d45a00; /* Updated to a darker shade of orange */
+      background-color: #d45a00;
       color: white;
       border: none;
       padding: 10px;
@@ -78,7 +78,7 @@
       overflow-y: auto;
       padding-top: 70px;
       transition: left 0.3s ease;
-      z-index: 101; /* Set a higher z-index than the new-div */
+      z-index: 101;
     }
 
     /* Close button styles */
@@ -118,23 +118,24 @@
       margin-top: 30px;
       margin-left: 20px;
       height: 0px;
-      width: 1fr; /* Set flex to 1 (1fr) */
+      width: 1fr;
     }
+
     .Nsfas {
       color: #d45a00;
     }
 
     /* Hero container styles */
     .hero-container {
-      width: 1fr; /* Set flex to 1 (1fr) */
-      overflow: hidden; /* Hide overflow to prevent scrollbar */
-      position: relative; /* Relative positioning for absolute positioning of the image */
+      width: 1fr;
+      overflow: hidden;
+      position: relative;
     }
 
     /* Hero image styles */
     .hero-image {
       width: 100%;
-      animation: moveUpDown 2s ease infinite; /* Add animation */
+      animation: moveUpDown 2s ease infinite;
     }
 
     /* Animation keyframes for moving up and down */
@@ -149,15 +150,15 @@
 
     /* NSFAS logo styles */
     .nsfas-logo {
-      width: auto; /* Set width to auto to maintain original shape */
+      width: auto;
       height: 40px;
     }
 
     /* Icon styles */
     .icon {
-      width: 20px; /* Adjust the size as needed */
+      width: 20px;
       height: 20px;
-      margin-right: 5px; /* Add margin for spacing */
+      margin-right: 5px;
     }
 
     /* Styles for the open state of the navbar */
@@ -172,12 +173,11 @@
       text-align: center;
       margin-top: 70px;
       position: relative;
-      z-index: 100; /* Set a lower z-index than the navbar */
-      
+      z-index: 100;
     }
 
     .new-button {
-      background-color: #d45a00; /* Updated to a darker shade of orange */
+      background-color: #d45a00;
       color: white;
       border: none;
       padding: 10px;
@@ -236,7 +236,7 @@
   <!-- Left Navigation Bar -->
   <div class="navbar" id="navbar">
     <button class="close-btn" onclick="toggleNavbar()">Close Navbar</button>
-    <a href="#">Home</a>
+    <a href="javascript:void(0);" onclick="location.reload();">Home</a>
     <a href="#">About</a>
     <a href="#">Services</a>
     <a href="#">Contact</a>
