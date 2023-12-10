@@ -20,7 +20,7 @@
       position: fixed;
       width: 100%;
       top: 0;
-      z-index: 1000;
+      z-index: 1000; /* Higher z-index for the header */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -51,7 +51,7 @@
       overflow-y: auto;
       padding-top: 120px; /* Increased padding-top by 50px */
       transition: left 0.3s ease;
-      z-index: 1001;
+      z-index: 999; /* Lower z-index for the navbar when open */
       border-right: 1px solid #ccc;
     }
 
