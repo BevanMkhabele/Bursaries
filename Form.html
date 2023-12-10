@@ -16,11 +16,11 @@
       background-color: white;
       color: black;
       text-align: center;
-      padding: 0px;
+      padding: 20px 0; /* Added 20px padding to the top and bottom */
       position: fixed;
       width: 100%;
       top: 0;
-      z-index: 1000; /* Higher z-index for the header */
+      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -49,9 +49,9 @@
       top: 0;
       left: -200px;
       overflow-y: auto;
-      padding-top: 120px; /* Increased padding-top by 50px */
+      padding-top: 120px;
       transition: left 0.3s ease;
-      z-index: 999; /* Lower z-index for the navbar when open */
+      z-index: 999;
       border-right: 1px solid #ccc;
     }
 
@@ -107,18 +107,19 @@
 
   <!-- Header -->
   <div class="header">
-    <div class="header-div">
-      <!-- Div 1 in the header -->
-      <h2>Header Div 1</h2>
+    <!-- Profile icon container -->
+    <div class="profile-icon">
+      <!-- NSFAS logo -->
+      <img src="NSFASlogo.jpeg" alt="NSFAS Logo" class="nsfas-logo">
     </div>
-    <div class="header-div">
-      <!-- Div 2 in the header -->
-      <button class="open-btn" onclick="toggleNavbar()">Open Navbar</button>
-    </div>
-    <div class="header-div">
-      <!-- Div 3 in the header -->
-      <h2>Header Div 3</h2>
-    </div>
+
+    <!-- Open Button with Icon -->
+    <button class="open-btn" onclick="toggleNavbar()">
+      <img src="open-btn.jpeg" alt="Open Icon" class="icon">
+    </button>
+
+    <!-- Right Button -->
+    <button class="right-btn">myNSFAS</button>
   </div>
 
   <!-- Left Navbar -->
