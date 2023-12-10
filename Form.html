@@ -2,103 +2,175 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registration Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: lightblue;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Upload Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-        h1 {
-            text-align: center;
-            color: #333;
-            font-family: Arial, sans-serif;
-        }
+    /* Header styles */
+    .header {
+      background-color: white; /* Updated background color to white */
+      color: black; /* Updated text color to black */
+      text-align: center;
+      padding: 0px;
+      position: fixed; /* Make the header sticky */
+      width: 100%; /* Full width */
+      top: 0; /* Stick to the top */
+      z-index: 1000; /* Set a high z-index to ensure it stays above other elements */
+      display: flex; /* Use flexbox for layout */
+      justify-content: space-between; /* Space elements evenly */
+      align-items: center; /* Center items vertically */
+      border-bottom: 1px solid #ccc; /* Add a thin bottom border */
+    }
 
-        p {
-            text-align: center;
-            color: #777;
-            font-family: Arial, sans-serif;
-        }
+    .header-div {
+      display: flex; /* Make the header-div a flex container */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      margin: 0 20px; /* Add margin to separate header-divs */
+      padding: 0; /* Set padding to 0 */
+    }
 
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-        }
+    h1 {
+      margin: 0px;
+    }
 
-        label {
-            display: block;
-            margin: 10px 0;
-        }
+    /* Left navbar styles */
+    .navbar {
+      width: 200px;
+      height: 100vh;
+      background-color: white; /* Navbar background color */
+      color: black; /* Text color */
+      position: fixed;
+      top: 0;
+      left: -200px; /* Initially hidden */
+      overflow-y: auto;
+      padding-top: 70px;
+      transition: left 0.3s ease;
+      z-index: 1001; /* Ensure it's above the header */
+      border-right: 1px solid #ccc; /* Add a right border */
+    }
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
+    .navbar a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: black; /* Text color */
+    }
 
-        .button {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: block;
-            margin-top: 10px;
-        }
-    </style>
+    .navbar a:hover {
+      background-color: #ccc; /* Hover background color */
+    }
+
+    /* Open button styles */
+    .open-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: #4CAF50;
+      font-size: 18px;
+    }
+
+    /* Container for three divs */
+    .div-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+      margin-top: 100px; /* Add a top margin of 100px */
+    }
+
+    /* Individual div styles */
+    .upload-div {
+      background-color: #3498db;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    /* Content styles */
+    .content {
+      min-height: 500px; /* Set a minimum height for scrollability */
+      padding: 20px;
+    }
+
+    /* Add more styles as needed */
+  </style>
 </head>
 
 <body>
-    <h1>Registration Form</h1>
-    <p>Fill in the registration form below:</p>
 
-    <form id="registrationForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+  <!-- Header -->
+  <div class="header">
+    <div class="header-div">
+      <!-- Div 1 in the header -->
+      <h2>Header Div 1</h2>
+    </div>
+    <div class="header-div">
+      <!-- Div 2 in the header -->
+      <button class="open-btn" onclick="toggleNavbar()">Open Navbar</button>
+    </div>
+    <div class="header-div">
+      <!-- Div 3 in the header -->
+      <h2>Header Div 3</h2>
+    </div>
+  </div>
 
-        <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname" required>
+  <!-- Left Navbar -->
+  <div class="navbar" id="navbar">
+    <button class="close-btn" onclick="toggleNavbar()">Close Navbar</button>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
 
-        <label for="idNumber">South African ID Number:</label>
-        <input type="text" id="idNumber" name="idNumber" required>
+  <!-- Div Container -->
+  <div class="div-container">
+    <!-- Div 1: Upload Document -->
+    <div class="upload-div">
+      <h2>Upload Document</h2>
+    </div>
 
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+    <!-- Div 2: Additional Div -->
+    <div class="additional-div">
+      <h2>Additional Div</h2>
+    </div>
 
-        <!-- New section for uploading parents' details and financial information -->
-        <label for="parentsDetails">Upload Parents Details:</label>
-        <input type="file" id="parentsDetails" name="parentsDetails" accept=".pdf, .jpg, .png" required>
+    <!-- Div 3: Another Div -->
+    <div class="another-div">
+      <h2>Another Div</h2>
+    </div>
+  </div>
 
-        <label for="idPicture">Upload ID Picture:</label>
-        <input type="file" id="idPicture" name="idPicture" accept=".jpg, .png" required>
+  <!-- Document Upload Page Content -->
+  <div class="content">
+    <h1>Main Content Goes Here</h1>
+    <!-- Add more content to exceed the minimum height and make the page scrollable -->
+  </div>
 
-        <label for="proofOfResidence">Upload Proof of Residence:</label>
-        <input type="file" id="proofOfResidence" name="proofOfResidence" accept=".pdf, .jpg, .png" required>
+  <script>
+    var navbar = document.getElementById('navbar');
 
-        <label for="bankStatement">Upload 3 Months Bank Statement:</label>
-        <input type="file" id="bankStatement" name="bankStatement" accept=".pdf" required>
-        <!-- End of new section -->
+    // Function to toggle the visibility of the navbar
+    function toggleNavbar() {
+      var currentLeft = parseInt(window.getComputedStyle(navbar).left);
+      if (currentLeft >= 0) {
+        // If navbar is visible, hide it
+        navbar.style.left = "-200px";
+      } else {
+        // If navbar is hidden, show it
+        navbar.style.left = "0";
+      }
+    }
+  </script>
 
-        <button type="button" class="button" onclick="submitForm()">Submit</button>
-    </form>
-
-    <script>
-        function submitForm() {
-            // Add form validation logic if needed
-            window.location.href = 'complete.html';
-        }
-    </script>
 </body>
 
 </html>
