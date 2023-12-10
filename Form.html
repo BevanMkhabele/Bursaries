@@ -117,7 +117,7 @@
 
     /* Container for three divs */
     .div-container {
-      display: flex;
+      display: flex; /* Make the divs flex */
       justify-content: space-around;
       align-items: center;
       padding: 20px;
@@ -168,6 +168,11 @@
       border-radius: 5px;
       font-size: 12px;
     }
+
+    /* File input styles (hidden by default) */
+    .file-input {
+      display: none;
+    }
   </style>
 </head>
 
@@ -203,12 +208,11 @@
 
   <!-- Content Section (Placeholder) -->
   <div class="content">
-    <h2>Main Content Goes Here</h2>
     <!-- Add your main content here -->
 
     <!-- New div inside the main content -->
     <div class="new-content">
-      <h3 >DOCUMENT UPLOAD SECTION </h3>
+      <h3>DOCUMENT UPLOAD SECTION</h3>
       <p></p>
     </div>
 
@@ -216,19 +220,20 @@
     <div class="div-container">
       <div class="vertical-div">
         <p>A Valid SA ID</p>
-        <button class="button-in-div">Upload</button>
+        <button class="button-in-div" onclick="uploadDocument('saId')">Upload</button>
       </div>
       <div class="vertical-div">
-        <p>3 Latest payslips  </p>
-        <button class="button-in-div">Upload</button>
+        <p>3 Latest payslips</p>
+        <button class="button-in-div" onclick="uploadDocument('payslips')">Upload</button>
       </div>
       <div class="vertical-div">
-        <p>3 latest  bank statements</p>
-        <button class="button-in-div">Upload</button>
+        <p>3 latest bank statements</p>
+        <button class="button-in-div" onclick="uploadDocument('bankStatements')">Upload</button>
       </div>
     </div>
   </div>
 
+  <!-- JavaScript Section -->
   <script>
     var navbar = document.getElementById('navbar');
 
@@ -248,6 +253,27 @@
     function showDocumentsSection() {
       var documentsSection = document.getElementById('documents-section');
       documentsSection.style.display = 'block';
+    }
+
+    // Function to handle document upload
+    function uploadDocument(documentType) {
+      // Create a file input element
+      var fileInput = document.createElement('input');
+      fileInput.type = 'file';
+      fileInput.className = 'file-input';
+      fileInput.accept = 'application/pdf,image/*'; // Adjust the accepted file types
+
+      // Trigger the file input click event
+      fileInput.click();
+
+      // Handle file selection
+      fileInput.addEventListener('change', function () {
+        var selectedFile = fileInput.files[0];
+        if (selectedFile) {
+          // Perform upload logic here (you may want to send the file to a server)
+          alert('File uploaded successfully!');
+        }
+      });
     }
   </script>
 
