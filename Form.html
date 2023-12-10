@@ -59,8 +59,8 @@
       border-radius: 5px;
       font-size: 12px;
     }
-    .icon{
-    width: 20px;
+    .icon {
+      width: 20px;
     }
 
     /* Header div styles */
@@ -88,11 +88,12 @@
       overflow-y: auto;
       padding-top: 120px;
       transition: left 0.3s ease;
-      z-index: 999;
+      z-index: 99; /* Set a lower z-index for the navbar */
       border-right: 1px solid #ccc;
     }
 
-    .navbar a, .close-btn {
+    .navbar a,
+    .close-btn {
       display: block;
       padding: 10px;
       text-decoration: none;
@@ -100,7 +101,8 @@
       cursor: pointer;
     }
 
-    .navbar a:hover, .close-btn:hover {
+    .navbar a:hover,
+    .close-btn:hover {
       background-color: #ccc;
     }
 
@@ -170,8 +172,11 @@
     <a href="#" onclick="showDocumentsSection()">Documents</a> <!-- Add a new section for Documents -->
   </div>
 
-  
-
+  <!-- Content Section (Placeholder) -->
+  <div class="content">
+    <h2>Main Content Goes Here</h2>
+    <!-- Add your main content here -->
+  </div>
 
   <script>
     var navbar = document.getElementById('navbar');
@@ -188,7 +193,7 @@
       }
     }
 
-    // Function to show the Documents section
+    // Function to show the Documents section (Placeholder)
     function showDocumentsSection() {
       var documentsSection = document.getElementById('documents-section');
       documentsSection.style.display = 'block';
