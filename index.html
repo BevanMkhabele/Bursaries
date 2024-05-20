@@ -1,301 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sticky Header with NSFAS Logo</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Sticky header styles */
-    .header {
-      background-color: white;
-      padding: 10px 20px;
-      color: black;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ccc;
-      margin-top: 0px;
-      margin-bottom: 20px;
-    }
-
-    /* Profile icon container */
-    .profile-icon {
-      margin-right: 10px;
-    }
-
-    /* Open button styles */
-    .open-btn {
-      background-color: white;
-      color: black;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 16px;
-      width: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Right button styles */
-    .right-btn {
-      background-color: #d45a00;
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
-      font-size: 12px;
-    }
-
-    /* Hamburger icon styles */
-    .hamburger-icon {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin-bottom: 5px;
-    }
-
-    /* Left navigation bar styles */
-    .navbar {
-      width: 200px;
-      height: 100vh;
-      background-color: #f4f4f4;
-      position: fixed;
-      top: 0;
-      left: -200px;
-      overflow-y: auto;
-      padding-top: 70px;
-      transition: left 0.3s ease;
-      z-index: 101;
-    }
-
-    /* Close button styles */
-    .close-btn {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 16px;
-      text-align: right;
-      width: 100%;
-    }
-
-    /* Style for navbar links */
-    .navbar a {
-      display: block;
-      padding: 10px;
-      text-decoration: none;
-      color: #333;
-    }
-
-    /* Change link color on hover */
-    .navbar a:hover {
-      background-color: #ddd;
-    }
-
-    /* Parent container for flex layout */
-    .flex-container {
-      display: flex;
-      height: 300px;
-    }
-
-    /* Page content styles */
-    .content {
-      padding: 20px;
-      margin-top: 30px;
-      margin-left: 20px;
-      height: 0px;
-      width: 1fr;
-    }
-
-    .Nsfas {
-      color: #d45a00;
-    }
-
-    /* Hero container styles */
-    .hero-container {
-      width: 1fr;
-      overflow: hidden;
-      position: relative;
-    }
-
-    /* Hero image styles */
-    .hero-image {
-      width: 100%;
-      animation: moveUpDown 2s ease infinite;
-    }
-
-    /* Animation keyframes for moving up and down */
-    @keyframes moveUpDown {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    /* NSFAS logo styles */
-    .nsfas-logo {
-      width: auto;
-      height: 40px;
-    }
-
-    /* Icon styles */
-    .icon {
-      width: 20px;
-      height: 20px;
-      margin-right: 5px;
-    }
-
-    /* Styles for the open state of the navbar */
-    .navbar.open {
-      left: 0;
-    }
-
-    /* Additional styles for the new div and button */
-    .new-div {
-      padding: 20px;
-      background-color: #f4f4f4;
-      text-align: center;
-      margin-top: 70px;
-      position: relative;
-      z-index: 100;
-    }
-
-    .new-button {
-      background-color: #d45a00;
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
-      font-size: 12px;
-      position: relative;
-    }
-
-    /* Loading circle animation */
-    .loading-circle {
-      border: 4px solid rgba(255, 255, 255, 0.3);
-      border-top: 4px solid #d45a00;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      animation: spin 1s linear infinite;
-      display: none;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-      }
-      100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City in Chaos: Pursuing the Elusive Malawian Scammer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: "News", sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
-
-  <!-- Header -->
-  <div class="header">
-    <!-- Profile icon container -->
-    <div class="profile-icon">
-      <!-- NSFAS logo -->
-      <img src="NSFASlogo.jpeg" alt="NSFAS Logo" class="nsfas-logo">
+    <header>
+        <h1>City in Chaos: Pursuing the Elusive Malawian Scammer</h1>
+    </header>
+    <div class="container">
+        <div class="image-container">
+            <img src="news1.png" alt="News Image 1">
+            <img src="news2.png" alt="News Image 2">
+            <img src="news3.png" alt="News Image 3">
+        </div>
+        <p>Pretoria is in turmoil as a notorious scammer from Malawi spreads chaos, using fake documents to deceive innocent victims. Families and bikers alike are left in distress as the scammer swindles them and even threatens them at gunpoint before fleeing with their belongings.</p>
+        <p>Now, the community is rallying together, determined to catch the elusive criminal and restore peace to the streets of Pretoria. With tensions running high and the city on edge, everyone is on high alert, hoping to put an end to the scammer's reign of terror.</p>
     </div>
-
-    <!-- Open Button with Icon -->
-    <button class="open-btn" onclick="toggleNavbar()">
-      <img src="open-btn.jpeg" alt="Open Icon" class="icon">
-    </button>
-
-    <!-- Right Button -->
-    <button class="right-btn">myNSFAS</button>
-  </div>
-
-  <!-- Left Navigation Bar -->
-  <div class="navbar" id="navbar">
-    <button class="close-btn" onclick="toggleNavbar()">Close Navbar</button>
-    
-    <a href="javascript:void(0);" onclick="location.reload();">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-  </div>
-
-  <!-- Flex Container for Content and Hero Container -->
-  <div class="flex-container">
-    <!-- Page Content -->
-    <div class="content">
-      <h1><span class="Nsfas">NSFAS</span>2024 Applications <span class="Nsfas">are officially</span> opened!</h1>
-      <p>This page has been specifically designed for students without funding, who will receive the link from an official NSFAS guide to facilitate the process of document uploads for their assistance.</p>
-      <!-- Add more content as needed -->
-    </div>
-
-    <!-- Hero Container with Image -->
-    <div class="hero-container">
-      <img src="hero-3.png" alt="Hero Image" class="hero-image">
-    </div>
-  </div>
-
-  <!-- New div with a button -->
-  <div class="new-div">
-    <button class="new-button" onclick="openForm()">Upload Documents
-      <div class="loading-circle" id="loadingCircle"></div>
-    </button>
-  </div>
-
-  <script>
-    // Function to toggle the visibility of the navbar
-    function toggleNavbar() {
-      var navbar = document.getElementById('navbar');
-      navbar.classList.toggle('open');
-    }
-
-    // Function to handle button click and show loading circle
-    function handleButtonClick() {
-      var loadingCircle = document.getElementById('loadingCircle');
-      loadingCircle.style.display = 'inline-block';
-
-      // Simulate some asynchronous task (e.g., AJAX request)
-      setTimeout(function () {
-        // Hide loading circle after the task is completed
-        loadingCircle.style.display = 'none';
-      }, 2000); // Adjust the duration as needed
-    }
-
-    // Function to open "Form.html"
-    function openForm() {
-      window.location.href = 'Form.html';
-    }
-
-    // Function to open the navbar
-    function openNavbar() {
-      var navbar = document.getElementById('navbar');
-      navbar.classList.add('open');
-    }
-  </script>
-
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 City in Chaos. All rights reserved.</p>
+    </footer>
 </body>
-
 </html>
