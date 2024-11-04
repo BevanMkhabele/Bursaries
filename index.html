@@ -3,83 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>City in Chaos: Pursuing the Elusive Malawian Scammer</title>
+    <title>Rotating Earth</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #f2f2f2;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
+        body { 
             margin: 0;
-            font-size: 2rem;
-            font-weight: bold;
-            font-family: "News", sans-serif;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        .image-container {
+            overflow: hidden;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>City in Chaos: Pursuing the Elusive Malawian Scammer</h1>
-    </header>
-    <div class="container">
-        <div class="image-container">
-            <img src="news1.JPG" alt="News Image 1">
-            <img src="news2.JPG" alt="News Image 2">
-            <img src="news3.JPG" alt="News Image 3">
-        </div>
-        <p>Pretoria is in turmoil as a notorious scammer from Malawi spreads chaos, using fake documents to deceive innocent victims. Families and bikers alike are left in distress as the scammer swindles them and even threatens them at gunpoint before fleeing with their belongings.</p>
-        <p>Now, the community is rallying together, determined to catch the elusive criminal and restore peace to the streets of Pretoria. With tensions running high and the city on edge, everyone is on high alert, hoping to put an end to the scammer's reign of terror.</p>
-    </div>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <p>&copy; 2024 City in Chaos. All rights reserved.</p>
-    </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://threejs.org/examples/jsm/controls/OrbitControls.js"></script>
+<script>
+    // Set up the scene, camera, and renderer
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Load Earth texture and create a sphere
+    const textureLoader = new THREE.TextureLoader();
+    const earthTexture = textureLoader.load('https://threejs.org/examples/textures/earth_atmos_2048.jpg'); // Earth texture
+
+    const geometry = new THREE.SphereGeometry(2, 50, 50);
+    const material = new THREE.MeshStandardMaterial({
+        map: earthTexture
+    });
+    const earth = new THREE.Mesh(geometry, material);
+    scene.add(earth);
+
+    // Add lighting for better visibility
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+    scene.add(ambientLight);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(5, 5, 5).normalize();
+    scene.add(directionalLight);
+
+    // Set camera position
+    camera.position.z = 8;
+
+    // Add Orbit controls for interactivity
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableZoom = true;
+
+    // Animate the Earth to rotate
+    function animate() {
+        requestAnimationFrame(animate);
+        earth.rotation.y += 0.003; // Rotate the Earth slowly
+        controls.update();
+        renderer.render(scene, camera);
+    }
+    animate();
+
+    // Adjust scene on window resize
+    window.addEventListener('resize', () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+    });
+</script>
+
 </body>
 </html>
